@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+  	<groupId>com.idega.block.addon</groupId>
+  	<artifactId>com.idega.block.addon</artifactId>
+  	<version>5.0.0-SNAPSHOT</version>
+  </parent>
+  <packaging>jar</packaging>
+  <artifactId>com.idega.jbpm</artifactId>
+  <name>JBoss BPM  ver. 2 integration</name>
+  <inceptionYear>2016</inceptionYear>
+  <description>The JBoss business process and workflow engine. See http://www.jbpm.org</description>
+  <developers>
+    <developer>
+      <name>Valdas Žemaitis</name>
+      <id>valdas</id>
+      <email>valdas@idega.com</email>
+      <organization>Idega Software</organization>
+      <roles />
+    </developer>
+  </developers>
+  <dependencies>
+  	<dependency>
+      <groupId>com.idega.block.platform</groupId>
+      <artifactId>com.idega.core</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.idega.block.platform</groupId>
+      <artifactId>com.idega.webface</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.idega.block.platform</groupId>
+      <artifactId>com.idega.hibernate</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.idega.block.platform</groupId>
+      <artifactId>com.idega.springframework</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.idega.block.platform</groupId>
+      <artifactId>com.idega.faces</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.idega.block.platform</groupId>
+      <artifactId>com.idega.block.process</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.idega.block.platform</groupId>
+      <artifactId>com.idega.block.login</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.idega.block.platform</groupId>
+      <artifactId>com.idega.jackrabbit</artifactId>
+    </dependency>
+    <dependency>
+    	<groupId>com.idega.block.addon</groupId>
+		<artifactId>com.idega.block.email</artifactId>
+    </dependency>
+  </dependencies>
+</project>
