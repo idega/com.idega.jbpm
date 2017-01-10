@@ -7,6 +7,8 @@ public class IWBundleStarter implements IWBundleStartable {
 
 	@Override
 	public void start(IWBundle starterBundle) {
+		Example example = new Example();
+		example.test();
 	}
 
 	@Override
