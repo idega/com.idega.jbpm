@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_1_0.xsd"
+    version="1.0">
+
+    <!-- task service -->
+    <entity class="org.jbpm.services.task.impl.model.AttachmentImpl"/>
+    <entity class="org.jbpm.services.task.impl.model.ContentImpl"/>
+    <entity class="org.jbpm.services.task.impl.model.BooleanExpressionImpl"/>
+    <entity class="org.jbpm.services.task.impl.model.CommentImpl"/>
+    <entity class="org.jbpm.services.task.impl.model.DeadlineImpl"/>
+    <entity class="org.jbpm.services.task.impl.model.DelegationImpl"/>
+    <entity class="org.jbpm.services.task.impl.model.EscalationImpl"/>
+    <entity class="org.jbpm.services.task.impl.model.GroupImpl"/>
+    <entity class="org.jbpm.services.task.impl.model.I18NTextImpl"/>
+    <entity class="org.jbpm.services.task.impl.model.NotificationImpl"/>
+    <entity class="org.jbpm.services.task.impl.model.EmailNotificationImpl"/>
+    <entity class="org.jbpm.services.task.impl.model.EmailNotificationHeaderImpl"/>
+    <entity class="org.jbpm.services.task.impl.model.PeopleAssignmentsImpl"/>
+    <entity class="org.jbpm.services.task.impl.model.ReassignmentImpl"/>
+    <entity class="org.jbpm.services.task.impl.model.TaskImpl"/>
+    <entity class="org.jbpm.services.task.impl.model.TaskDefImpl"/>
+    <entity class="org.jbpm.services.task.impl.model.TaskDataImpl"/>
+    <entity class="org.jbpm.services.task.impl.model.UserImpl"/>
+    <entity class="org.jbpm.executor.entities.ErrorInfo"/>
+    <entity class="org.jbpm.executor.entities.RequestInfo"/>
+    <!-- Event entityes -->
+    <entity class="org.jbpm.services.task.audit.impl.model.TaskEventImpl"/>
+     
+    <!-- Task Audit entityes --> 
+    <entity class="org.jbpm.services.task.audit.impl.model.AuditTaskImpl"/>
+    <entity class="org.jbpm.services.task.audit.impl.model.TaskVariableImpl"/>
+      
+    <!--BAM for task service -->
+    <entity class="org.jbpm.services.task.audit.impl.model.BAMTaskSummaryImpl"/>
+
+    <!-- engine -->
+    <entity class="org.drools.persistence.info.SessionInfo"/>
+    <entity class="org.jbpm.persistence.processinstance.ProcessInstanceInfo"/>
+    <entity class="org.drools.persistence.info.WorkItemInfo"/>
+    <entity class="org.jbpm.persistence.correlation.CorrelationKeyInfo"/>
+    <entity class="org.jbpm.persistence.correlation.CorrelationPropertyInfo"/>
+    <!-- manager -->
+    <entity class="org.jbpm.runtime.manager.impl.jpa.ContextMappingInfo"/>
+
+    <!-- bam -->
+    <entity class="org.jbpm.process.audit.ProcessInstanceLog"/>
+    <entity class="org.jbpm.process.audit.NodeInstanceLog"/>
+    <entity class="org.jbpm.process.audit.VariableInstanceLog"/>
+    
+    <!-- deployment store -->
+    <entity class="org.jbpm.kie.services.impl.store.DeploymentStoreEntry"/>
+    <!--  query service storage -->
+    <entity class="org.jbpm.kie.services.impl.query.persistence.QueryDefinitionEntity"/>
+        
+</entity-mappings>
