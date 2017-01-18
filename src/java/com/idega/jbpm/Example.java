@@ -140,7 +140,7 @@ public class Example {
     private AuditService logService;
     private WorkingMemoryInMemoryLogger inMemoryLogger;
 
-    private UserGroupCallback userGroupCallback = new JBossUserGroupCallbackImpl("file:/home/idega/jBPM/usergroups.properties");
+    private UserGroupCallback userGroupCallback = new JBossUserGroupCallbackImpl("classpath:resources/processes/usergroups.properties");
 
     private Set<RuntimeEngine> activeEngines = new HashSet<RuntimeEngine>();
 
