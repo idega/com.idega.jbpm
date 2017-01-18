@@ -140,7 +140,7 @@ public class Example {
     private AuditService logService;
     private WorkingMemoryInMemoryLogger inMemoryLogger;
 
-    private UserGroupCallback userGroupCallback = new JBossUserGroupCallbackImpl("usergroups.properties");
+    private UserGroupCallback userGroupCallback = new JBossUserGroupCallbackImpl("file:/home/idega/jBPM/usergroups.properties");
 
     private Set<RuntimeEngine> activeEngines = new HashSet<RuntimeEngine>();
 
@@ -305,7 +305,7 @@ public class Example {
             builder.addAsset(ResourceFactory.newClassPathResource(entry.getKey()), entry.getValue());
         }
 
-        return createRuntimeManager(resources, builder.get(), identifier);
+        return createRuntimeManager(builder.get(), identifier);
     }
 
     /**
@@ -314,12 +314,11 @@ public class Example {
      * that allows to configure every single piece of <code>RuntimeManager</code>. <br/>
      * Use this only when you know what you do!
      * @param strategy - selected strategy of those that are supported
-     * @param resources - resources that shall be added to knowledge base
      * @param environment - runtime environment used for <code>RuntimeManager</code> creation
      * @param identifier - identifies the runtime manager
      * @return new instance of RuntimeManager
      */
-    private RuntimeManager createRuntimeManager(Map<String, ResourceType> resources, RuntimeEnvironment environment, String identifier) {
+    private RuntimeManager createRuntimeManager(RuntimeEnvironment environment, String identifier) {
         if (manager != null) {
             throw new IllegalStateException("There is already one RuntimeManager active");
         }
@@ -385,7 +384,7 @@ public class Example {
 		JpaSettings settings = JpaSettings.get();
 		settings.setDataSourceJndiName("java:comp/env/jdbc/DefaultDS");
 		
-		RuntimeManager manager = createRuntime(null, "sample.bpmn");
+		RuntimeManager manager = createRuntime(null, "resources/processes/test/sample.bpmn");
 		RuntimeEngine engine = getRuntimeEngine(null);
 		KieSession ksession = engine.getKieSession();
 		TaskService taskService = engine.getTaskService();
@@ -394,7 +393,7 @@ public class Example {
 			
 		// let john execute Task 1
 		List<TaskSummary> list = taskService.getTasksAssignedAsPotentialOwner("john", "en-UK");
-		TaskSummary task = list.get(0);
+		TaskSummary task = list.get(0); 
 		System.out.println("John is executing task " + task.getName());
 		taskService.start(task.getId(), "john");
 		taskService.complete(task.getId(), "john", null);
